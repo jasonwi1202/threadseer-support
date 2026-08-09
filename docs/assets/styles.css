@@ -27,6 +27,7 @@ a:focus-visible, .button:focus-visible { outline: 3px solid #ffbf47; outline-off
 .nav-links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: .95rem; }
 .nav-links a:hover { color: var(--ink); }
+.nav-links a[aria-current="page"] { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35rem; }
 main { min-height: calc(100vh - 190px); }
 .hero { background: radial-gradient(circle at 85% 5%, #dce7ff 0, transparent 34%), linear-gradient(180deg, #f8fbff, var(--paper)); border-bottom: 1px solid var(--line); }
 .hero-inner, .content { max-width: 960px; margin: 0 auto; padding: 4.5rem 1.25rem; }
@@ -49,6 +50,12 @@ a.button.secondary:hover { color: var(--brand-dark); background: var(--wash); bo
 .notice { margin: 1.5rem 0; padding: 1rem 1.1rem; border-left: 4px solid var(--accent); border-radius: 4px; background: #ecfaf7; }
 .notice.warning { border-left-color: #d27b1f; background: #fff8ec; color: #55300c; }
 .checklist li { margin-bottom: .55rem; }
+.table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+table { width: 100%; min-width: 680px; border-collapse: collapse; background: white; }
+th, td { padding: .8rem .9rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: var(--wash); font-size: .92rem; }
+tr:last-child td { border-bottom: 0; }
+.content li + li { margin-top: .35rem; }
 .meta { color: var(--muted); font-size: .92rem; }
 .site-footer { border-top: 1px solid var(--line); background: var(--wash); }
 .footer-inner { max-width: 1080px; margin: 0 auto; padding: 1.5rem 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 1.5rem; color: var(--muted); font-size: .9rem; }
@@ -58,6 +65,7 @@ code { padding: .12rem .35rem; border-radius: 4px; background: var(--wash); }
 
 @media (max-width: 700px) {
   .nav { align-items: flex-start; flex-direction: column; padding-top: 1rem; padding-bottom: 1rem; }
+  .nav-links { row-gap: .65rem; }
   .grid { grid-template-columns: 1fr; }
   .hero-inner, .content { padding-top: 3rem; padding-bottom: 3rem; }
 }

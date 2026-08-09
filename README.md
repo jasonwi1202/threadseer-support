@@ -2,7 +2,12 @@
 
 This public repository hosts the support hub, legal notices, and issue tracker for **Threadseer for Power BI**.
 
-- [Support hub](https://jasonwi1202.github.io/threadseer-support/)
+- [Threadseer product and documentation home](https://jasonwi1202.github.io/threadseer-support/)
+- [Getting started](https://jasonwi1202.github.io/threadseer-support/getting-started/)
+- [Plans and licensing](https://jasonwi1202.github.io/threadseer-support/licensing/)
+- [Release notes](https://jasonwi1202.github.io/threadseer-support/release-notes/)
+- [Known issues and product limits](https://jasonwi1202.github.io/threadseer-support/known-issues/)
+- [Support guide](https://jasonwi1202.github.io/threadseer-support/support/)
 - [Open a bug report](https://github.com/jasonwi1202/threadseer-support/issues/new?template=bug_report.yml)
 - [Request a feature](https://github.com/jasonwi1202/threadseer-support/issues/new?template=feature_request.yml)
 - [Report a security vulnerability privately](https://github.com/jasonwi1202/threadseer-support/security/advisories/new)
@@ -14,4 +19,3 @@ Threadseer is distributed as a self-contained Power BI custom visual. Its produc
 Before posting, remove employer data, event logs, report files, screenshots with case identifiers, tenant details, proprietary field names, credentials, and secrets. Use a synthetic reproduction whenever possible.
 
 Support is provided on a reasonable-efforts basis. No response-time commitment is offered unless a separate written agreement says otherwise.
-
