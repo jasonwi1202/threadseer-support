@@ -1,20 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Known limitations and public issue tracking for Threadseer for Power BI.">
-  <title>Known issues · Threadseer</title><link rel="stylesheet" href="../assets/styles.css?v=20260809-hover-fix">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirmed Threadseer defects, current product limits, version scope, and reporting guidance.">
+  <title>Known Issues and Product Limits | Threadseer</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260809-docs-launch">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TS</span>Threadseer</a><div class="nav-links"><a href="../support/">Support</a><a href="./" aria-current="page">Known issues</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a></div></nav></header>
+  <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TS</span>Threadseer</a><div class="nav-links"><a href="../getting-started/">Getting started</a><a href="../licensing/">Plans</a><a href="../support/">Support</a><a href="./" aria-current="page">Known issues</a><a href="../release-notes/">Release notes</a></div></nav></header>
   <main id="main" class="page"><div class="content">
-    <div class="eyebrow">Product status</div><h1>Known issues and limits</h1>
-    <p class="lede">Confirmed product defects are tracked openly with the <em>known issue</em> label. Review those reports and the current operating limits before filing a duplicate.</p>
+    <div class="eyebrow">Product status</div><h1>Known issues and product limits</h1>
+    <p class="lede">Confirmed defects and intentional operating limits are tracked separately so you can tell a reproducible bug from a documented boundary.</p>
+    <p class="meta"><strong>Version scope:</strong> Current Threadseer 0.1.x validation builds &middot; <strong>Last reviewed:</strong> August 9, 2026</p>
+
+    <h2>Known issues</h2>
+    <p>The public GitHub tracker is the source of truth for confirmed current defects. Reports carrying the <em>known issue</em> label have been accepted as reproducible product issues; an empty result means no open issue currently carries that label.</p>
     <div class="actions"><a class="button" href="https://github.com/jasonwi1202/threadseer-support/issues?q=is%3Aissue+is%3Aopen+label%3A%22known+issue%22">View open known issues</a><a class="button secondary" href="https://github.com/jasonwi1202/threadseer-support/issues">Browse all issues</a></div>
-    <h2>Current operating limits</h2>
-    <ul class="checklist"><li>Community supports up to 25,000 input events.</li><li>Professional has a measured 100,000-event baseline. Adaptive Scale may attempt larger complete selections when local Power BI resources permit, up to an absolute ceiling of 1,000,000 events.</li><li>Larger capacity is not guaranteed and varies with data shape, memory, Power BI, WebView2, and device resources.</li><li>Threadseer never mines an incomplete prefix after resource admission stops loading data.</li><li>Changed fields or filters can make the current snapshot stale; use Reanalyze deliberately to replace it.</li></ul>
-    <h2>Before reporting a problem</h2><p>Follow the <a href="../support/">support checklist</a> and reproduce the behavior with synthetic data. Do not attach operational or personal data to a public issue.</p>
+
+    <h2>Product limits</h2>
+    <ul class="checklist">
+      <li>Community supports up to 25,000 input events per explicit analysis.</li>
+      <li>Professional has a measured 100,000-event baseline. Adaptive Scale may attempt larger complete selections when local Power BI resources permit, up to an absolute 1,000,000-event ceiling.</li>
+      <li>Capacity above the Professional baseline is not guaranteed and varies with data shape, memory, Power BI, WebView2, and device resources.</li>
+      <li>Threadseer never mines an incomplete prefix after resource admission or the Power BI host stops loading data.</li>
+      <li>The process map applies density limits to keep the workspace usable; narrow report filters when activity or transition cardinality is extreme.</li>
+      <li>The Cases view projects at most 200 matching cases, and a selected case timeline projects at most 500 events.</li>
+      <li>Changed fields or Power BI filters can make the current snapshot stale. The prior snapshot remains visible until you deliberately Analyze the new selection.</li>
+    </ul>
+
+    <h2>Licensing limits</h2>
+    <p>Professional is not publicly available yet and remains subject to the real Microsoft-managed entitlement matrix. Microsoft licensing is unsupported in several embedded, national/regional cloud, Report Server, and REST export environments. See <a href="../licensing/">Plans &amp; Licensing</a> for the current boundary.</p>
+
+    <h2>Before reporting a problem</h2><p>Follow the <a href="../support/">support checklist</a> and reproduce the behavior with synthetic data. Do not attach operational, confidential, or personal data to a public issue.</p>
   </div></main>
-  <footer class="site-footer"><div class="footer-inner"><p>© 2026 Threadseer. All rights reserved.</p><p><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="https://github.com/jasonwi1202/threadseer-support">GitHub</a></p></div></footer>
-</body></html>
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Jason Wittenauer. Threadseer. All rights reserved.</p><p><a href="../getting-started/">Getting started</a> &middot; <a href="../licensing/">Plans &amp; licensing</a> &middot; <a href="../release-notes/">Release notes</a> &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot; <a href="https://github.com/jasonwi1202/threadseer-support">GitHub</a></p></div></footer>
+</body>
+</html>

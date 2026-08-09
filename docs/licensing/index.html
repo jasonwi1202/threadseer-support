@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare Threadseer Community and planned Professional capabilities, scale boundaries, and Microsoft-managed licensing behavior.">
+  <title>Plans &amp; Licensing | Threadseer</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260809-docs-launch">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TS</span>Threadseer</a><div class="nav-links"><a href="../getting-started/">Getting started</a><a href="./" aria-current="page">Plans</a><a href="../support/">Support</a><a href="../known-issues/">Known issues</a><a href="../release-notes/">Release notes</a></div></nav></header>
+  <main id="main" class="page"><div class="content">
+    <div class="eyebrow">Edition guide</div>
+    <h1>Plans &amp; Licensing</h1>
+    <p class="lede">Threadseer is designed around a useful Community workflow and a Microsoft-managed Professional edition for larger and more advanced analysis.</p>
+    <div class="notice warning"><strong>Professional is not currently available for public purchase.</strong> The edition policy is implemented, but the real Partner Center, Power BI Desktop, and Power BI service entitlement matrix remains a launch gate. Availability and purchase details will be published only after that validation passes.</div>
+
+    <h2>Edition comparison</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Capability</th><th>Community</th><th>Professional (planned)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Explicit analysis scale</strong></td><td>Up to 25,000 input events.</td><td>Measured 100,000-event supported baseline. Adaptive Scale may attempt larger complete selections up to 1,000,000 when local resources permit.</td></tr>
+        <tr><td><strong>Required fields</strong></td><td>Case ID, Activity, Timestamp.</td><td>Same.</td></tr>
+        <tr><td><strong>Optional analysis context</strong></td><td>Activity Category, End Timestamp, Resource, and the first Additional Dimension.</td><td>Adds Outcome, Value or Cost, and up to three Additional Dimensions.</td></tr>
+        <tr><td><strong>Core workspace</strong></td><td>Process Map, Variants, Bottlenecks, Rework, Cases, and Data Quality.</td><td>Same core workspace.</td></tr>
+        <tr><td><strong>Process-map metrics</strong></td><td>Case count, event count, average duration.</td><td>Adds median and P90 duration, rework rate, outcome rate, total value, and average value.</td></tr>
+        <tr><td><strong>Variant exploration</strong></td><td>Up to 25 matching rows and one selected variant.</td><td>Up to 200 matching rows and four selected variants.</td></tr>
+        <tr><td><strong>Bottleneck and rework detail</strong></td><td>Core counts, rates, sequences, and contributing cases.</td><td>Adds advanced bottleneck and rework comparisons.</td></tr>
+        <tr><td><strong>Privacy architecture</strong></td><td>No Threadseer account, vendor licensing server, process telemetry, or external analysis engine.</td><td>Same. Microsoft supplies only the Power BI license signal.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>How Professional licensing is designed to work</h2>
+    <ol class="checklist">
+      <li>When a public offer is available, customers purchase the Professional plan through Microsoft Marketplace.</li>
+      <li>An administrator assigns the license to users through Microsoft's licensing tools.</li>
+      <li>The Power BI host reports the assigned Threadseer service-plan state to the visual through Microsoft's licensing API.</li>
+      <li>An Active or Warning plan enables Professional. Other, unavailable, or unsupported states remain Community.</li>
+    </ol>
+    <p>Threadseer does not run a publisher licensing server, create customer accounts, or transmit report/process data as part of licensing. The current safe implementation requires the assigned Professional plan for both authors and viewers who use Professional analysis; an author-only model has not been proven safely.</p>
+    <p>Microsoft documents AppSource purchase and Microsoft 365 license assignment for licensed visuals. See Microsoft's <a href="https://learn.microsoft.com/en-us/power-bi/developer/visuals/licensing-api">licensing and transactability guidance</a>.</p>
+
+    <h2>Professional environment limitations</h2>
+    <p>Microsoft currently documents license management or enforcement as unsupported in:</p>
+    <ul class="checklist">
+      <li>Publish to web and PaaS embedded scenarios;</li>
+      <li>national or regional clouds where transactability is unavailable;</li>
+      <li>Power BI Report Server; and</li>
+      <li>REST API PDF or PowerPoint export.</li>
+    </ul>
+    <p>Threadseer does not treat an unsupported or unavailable license signal as Professional access. Community behavior may remain available where the visual itself can run, but that does not promise that every environment supports interactive analysis, rendering, export, or Marketplace distribution. Review Microsoft's current <a href="https://learn.microsoft.com/en-us/power-bi/developer/visuals/custom-visual-licenses">Power BI visual licensing limitations</a>.</p>
+
+    <h2>Pricing and availability</h2>
+    <p>No public Professional price, checkout link, trial, or availability date is being advertised while the required licensing and release evidence remains incomplete.</p>
+    <p>When Threadseer becomes publicly available, this page will identify the Marketplace offer, current plan terms, purchase path, assignment guidance, and any launch-market limitations. Watch <a href="../release-notes/">Release Notes</a> for verified availability.</p>
+  </div></main>
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Jason Wittenauer. Threadseer. All rights reserved.</p><p><a href="../getting-started/">Getting started</a> &middot; <a href="./">Plans &amp; licensing</a> &middot; <a href="../release-notes/">Release notes</a> &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot; <a href="https://github.com/jasonwi1202/threadseer-support">GitHub</a></p></div></footer>
+</body>
+</html>
