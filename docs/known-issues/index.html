@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Known limitations and public issue tracking for Threadseer for Power BI.">
+  <title>Known issues · Threadseer</title><link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TS</span>Threadseer</a><div class="nav-links"><a href="../support/">Support</a><a href="./" aria-current="page">Known issues</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a></div></nav></header>
+  <main id="main" class="page"><div class="content">
+    <div class="eyebrow">Product status</div><h1>Known issues and limits</h1>
+    <p class="lede">Confirmed product defects are tracked openly with the <em>known issue</em> label. Review those reports and the current operating limits before filing a duplicate.</p>
+    <div class="actions"><a class="button" href="https://github.com/jasonwi1202/threadseer-support/issues?q=is%3Aissue+is%3Aopen+label%3A%22known+issue%22">View open known issues</a><a class="button secondary" href="https://github.com/jasonwi1202/threadseer-support/issues">Browse all issues</a></div>
+    <h2>Current operating limits</h2>
+    <ul class="checklist"><li>Community supports up to 25,000 input events.</li><li>Professional has a measured 100,000-event baseline. Adaptive Scale may attempt larger complete selections when local Power BI resources permit, up to an absolute ceiling of 1,000,000 events.</li><li>Larger capacity is not guaranteed and varies with data shape, memory, Power BI, WebView2, and device resources.</li><li>Threadseer never mines an incomplete prefix after resource admission stops loading data.</li><li>Changed fields or filters can make the current snapshot stale; use Reanalyze deliberately to replace it.</li></ul>
+    <h2>Before reporting a problem</h2><p>Follow the <a href="../support/">support checklist</a> and reproduce the behavior with synthetic data. Do not attach operational or personal data to a public issue.</p>
+  </div></main>
+  <footer class="site-footer"><div class="footer-inner"><p>© 2026 Threadseer. All rights reserved.</p><p><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="https://github.com/jasonwi1202/threadseer-support">GitHub</a></p></div></footer>
+</body></html>
+

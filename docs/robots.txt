@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jasonwi1202.github.io/threadseer-support/sitemap.xml
+
