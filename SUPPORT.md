@@ -6,5 +6,9 @@ Include the Threadseer version, Power BI environment and version, steps to repro
 
 Security vulnerabilities must not be filed publicly. Use [GitHub private vulnerability reporting](https://github.com/jasonwi1202/threadseer-support/security/advisories/new).
 
-Support is provided on a reasonable-efforts basis. This public channel has no guaranteed response or resolution time unless a separate written agreement says otherwise.
+Public issues are not appropriate for personal, account, purchase, licensing,
+legal, or privacy-rights information. Do not use private vulnerability reporting
+for ordinary support. A verified private support/privacy contact and Marketplace-
+specific contact path will be published before public sale.
 
+Support is provided on a reasonable-efforts basis. This public channel has no guaranteed response or resolution time unless a separate written agreement says otherwise.

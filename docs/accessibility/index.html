@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessibility statement, supported behavior, known boundaries, and reporting guidance for Threadseer for Power BI.">
+  <title>Accessibility | Threadseer</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260810-docs-readiness">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TS</span>Threadseer</a><div class="nav-links"><a href="../getting-started/">Getting started</a><a href="../licensing/">Plans</a><a href="../support/">Support</a><a href="../known-issues/">Known issues</a><a href="../release-notes/">Release notes</a></div></nav></header>
+  <main id="main" class="page"><div class="content">
+    <div class="eyebrow">Last reviewed August 10, 2026</div>
+    <h1>Accessibility</h1>
+    <p class="lede">Threadseer is designed to support keyboard operation, readable focus, semantic controls, high-contrast themes, reduced motion, and responsive Power BI layouts.</p>
+
+    <h2>Supported behavior</h2>
+    <ul class="checklist">
+      <li>Workspace tabs and interactive controls are keyboard reachable and expose visible focus.</li>
+      <li>Arrow, Home, and End keys support workspace-tab navigation.</li>
+      <li>Tables use semantic headings, buttons, labels, and bounded pagination.</li>
+      <li>Process-map elements expose textual labels and keyboard focus in addition to visual styling.</li>
+      <li>High-contrast colors and reduced-motion preferences are respected where the Power BI host supplies them.</li>
+      <li>Status, stale-snapshot, loading, cancellation, error, and data-quality messages use text rather than color alone.</li>
+      <li>Layouts adapt across compact, standard, and focus-mode visual sizes.</li>
+    </ul>
+
+    <h2>Host and content boundaries</h2>
+    <p>Threadseer runs inside Microsoft Power BI, so final focus order, zoom, screen-reader behavior, theme contrast, and export behavior also depend on the Power BI host, browser or WebView2, report design, and operating-system accessibility settings.</p>
+    <p>Dense process maps and wide analytical tables can require a larger visual or Power BI focus mode. Use the Cases and supporting table views when a graphical path is difficult to inspect.</p>
+
+    <h2>Report an accessibility problem</h2>
+    <p>Use the <a href="../support/">support guide</a> and public bug form for a non-confidential reproduction. Include the Threadseer and Power BI versions, assistive technology and version, input method, viewport or zoom, expected behavior, and actual behavior.</p>
+    <div class="notice warning"><strong>Keep operational data private.</strong> Do not upload report files, event logs, screenshots containing case identifiers, tenant details, personal information, credentials, or proprietary field names. Use a blank report and synthetic data.</div>
+    <p>If an accessibility request requires personal, account, purchase, legal, or other non-public information, do not place it in a public issue. A verified private support contact will be published before public sale.</p>
+  </div></main>
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Jason Wittenauer. Threadseer. All rights reserved.</p><p><a href="../getting-started/">Getting started</a> &middot; <a href="../licensing/">Plans &amp; licensing</a> &middot; <a href="../release-notes/">Release notes</a> &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot; <a href="./">Accessibility</a> &middot; <a href="https://github.com/jasonwi1202/threadseer-support">GitHub</a></p></div></footer>
+</body>
+</html>
