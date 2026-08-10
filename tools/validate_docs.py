@@ -116,7 +116,10 @@ for required_decision in (
 
 licensing = page_path("licensing").read_text(encoding="utf-8")
 for required_term in (
-    "Community is free",
+    "Community is free for personal, educational, evaluation, and internal commercial use",
+    "not limited to non-commercial use",
+    "same proprietary Threadseer visual",
+    "Microsoft Standard Contract",
     "US$20 per assigned user per month",
     "US$200 per assigned user per year",
     "no time-limited Professional trial",
