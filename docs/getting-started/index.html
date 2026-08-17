@@ -14,7 +14,7 @@
     <div class="eyebrow">Documentation</div>
     <h1>Getting started with Threadseer</h1>
     <p class="lede">Turn an event-level Power BI table into an interactive process snapshot without sending report or process data to the publisher or publisher-controlled services.</p>
-    <p class="meta"><strong>Version scope:</strong> Current Threadseer 0.1.x Marketplace approval candidates &middot; <strong>Last reviewed:</strong> August 10, 2026</p>
+    <p class="meta"><strong>Version scope:</strong> Threadseer 0.1.0.99 pre-submission build &middot; <strong>Last reviewed:</strong> August 17, 2026</p>
 
     <h2>What Threadseer does</h2>
     <p>Threadseer is a self-contained Power BI custom visual for process discovery and investigation. It groups events into cases, orders each case by time, discovers the paths those cases follow, and keeps the resulting analysis inside the Power BI visual environment.</p>
@@ -27,7 +27,7 @@
       <li>Resize the visual so the setup guidance and workspace navigation are visible.</li>
       <li>Assign the required event fields, then apply any Power BI filters that should define the initial analysis population.</li>
     </ol>
-    <div class="notice warning"><strong>Microsoft Marketplace approval is in progress.</strong> Threadseer is not yet verified as publicly available. Installation, purchase, and assignment instructions will be added only after approval and go-live are confirmed.</div>
+    <div class="notice warning"><strong>No Marketplace submission has been made.</strong> Threadseer is not publicly available. Installation, purchase, and assignment instructions will be added only after a future submission, approval, and go-live are confirmed.</div>
 
     <h2>Prepare the event data</h2>
     <p>Each source row should represent one event. Column names do not need to match Threadseer's role names; map the columns that carry the corresponding meaning.</p>
@@ -73,6 +73,7 @@
       <article class="card"><h3>Process Map</h3><p>Shows activities and observed paths. Edge styling distinguishes ordinary flow, bottleneck evidence, rework returns, shortcuts, and self-loops without turning those signals into causal claims.</p></article>
       <article class="card"><h3>Variants</h3><p>Ranks the distinct ordered activity sequences followed by cases and shows their volume, coverage, timing, and available outcome or value context.</p></article>
       <article class="card"><h3>Compare</h3><p>Places two exact observed variants side by side. Differences are descriptive associations from the current snapshot, not causal findings.</p></article>
+      <article class="card"><h3>Drivers</h3><p>Investigates where queue wait, processing time, or rework is concentrated across supplied dimensions and observed process context. Findings are transparent associations for investigation, not causal proof.</p></article>
       <article class="card"><h3>Bottlenecks</h3><p>Summarizes snapshot-relative processing and queue evidence. Valid End Timestamp observations are required for those duration categories.</p></article>
       <article class="card"><h3>Rework</h3><p>Shows repeated activities, return loops, their frequency, and the cases that contribute to them.</p></article>
       <article class="card"><h3>Improve</h3><p>Explores workflow regularity, supplied resource and handoff evidence, and observed shortcuts. It does not make automation, staffing, capacity, compliance, or return-on-investment recommendations.</p></article>

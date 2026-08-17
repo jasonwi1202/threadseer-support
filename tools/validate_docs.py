@@ -28,6 +28,7 @@ REQUIRED_VIEWS = (
     "Process Map",
     "Variants",
     "Compare",
+    "Drivers",
     "Bottlenecks",
     "Rework",
     "Improve",
@@ -102,10 +103,10 @@ require("Event / Row ID" in getting_started, "Getting Started is missing Event /
 
 release_notes = page_path("release-notes").read_text(encoding="utf-8")
 require(
-    "Microsoft Marketplace approval process is in progress" in release_notes,
-    "Release Notes must state the current approval-in-progress status",
+    "No Marketplace submission has been made" in release_notes,
+    "Release Notes must state the current not-submitted status",
 )
-require("not public Marketplace releases" in release_notes, "Release Notes must prohibit premature availability claims")
+require("not a public Marketplace release" in release_notes, "Release Notes must prohibit premature availability claims")
 for required_decision in (
     "United States",
     "US$20 per assigned user per month",
