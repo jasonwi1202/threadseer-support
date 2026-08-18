@@ -9,7 +9,8 @@ this repository.
 Use the issue forms for reproducible product problems and feature requests. Do
 not submit employer or customer event logs, PBIX/PBIP files, tenant identifiers,
 credentials, personal information, proprietary field names, or screenshots
-containing case data. Prefer a blank report and synthetic example.
+containing case data. Prefer a blank report and synthetic example. A GitHub
+account and sign-in are required to open an issue.
 
 Security vulnerabilities must use
 [private vulnerability reporting](https://github.com/jasonwi1202/threadseer-support/security/advisories/new),

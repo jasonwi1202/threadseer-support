@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -36,6 +37,8 @@ REQUIRED_VIEWS = (
     "Data Quality",
 )
 failures: list[str] = []
+release_status = json.loads((DOCS / "release-status.json").read_text(encoding="utf-8"))
+current_version = release_status.get("version")
 
 
 def require(condition: bool, message: str) -> None:
@@ -97,6 +100,11 @@ expected_locations = {
 require(locations == expected_locations, "sitemap.xml must contain exactly the required public pages")
 
 getting_started = page_path("getting-started").read_text(encoding="utf-8")
+require(
+    isinstance(current_version, str) and re.fullmatch(r"\d+\.\d+\.\d+\.\d+", current_version) is not None,
+    "release-status.json must identify a four-part numeric version",
+)
+require(release_status.get("status") == "pre-submission", "release-status.json must preserve the pre-submission status")
 for view in REQUIRED_VIEWS:
     require(view in getting_started, f"Getting Started is missing the {view} view")
 require("Event / Row ID" in getting_started, "Getting Started is missing Event / Row ID guidance")
@@ -132,6 +140,21 @@ known_issues = page_path("known-issues").read_text(encoding="utf-8")
 require(
     "Supported Power BI environments" in known_issues,
     "Known Issues must state the supported-environment boundary",
+)
+for name, content in (
+    ("Getting Started", getting_started),
+    ("Known Issues", known_issues),
+    ("Release Notes", release_notes),
+):
+    require(
+        f"Threadseer {current_version}" in content,
+        f"{name} must identify release-status.json version {current_version}",
+    )
+
+support = page_path("support").read_text(encoding="utf-8")
+require(
+    "GitHub account" in support and "sign in" in support,
+    "Support must disclose the GitHub account and sign-in requirement",
 )
 
 privacy = page_path("privacy").read_text(encoding="utf-8")
